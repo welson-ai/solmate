@@ -1,0 +1,113 @@
+@import 'tailwindcss';
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-mono: 'Geist Mono', monospace;
+  --background: #000000;
+  --foreground: #FFFFFF;
+  --card: #111111;
+  --card-foreground: #FFFFFF;
+  --primary: #00C896;
+  --primary-foreground: #000000;
+  --secondary: #1a1a1a;
+  --secondary-foreground: #FFFFFF;
+  --muted: #404040;
+  --muted-foreground: #999999;
+  --accent: #00C896;
+  --accent-foreground: #000000;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #1a1a1a;
+  --input: #1a1a1a;
+  --ring: #00C896;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: #000000;
+  --foreground: #FFFFFF;
+  --card: #111111;
+  --card-foreground: #FFFFFF;
+  --primary: #00C896;
+  --primary-foreground: #000000;
+  --secondary: #1a1a1a;
+  --secondary-foreground: #FFFFFF;
+  --muted: #404040;
+  --muted-foreground: #999999;
+  --accent: #00C896;
+  --accent-foreground: #000000;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #1a1a1a;
+  --input: #1a1a1a;
+  --ring: #00C896;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply bg-background text-foreground;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@layer utilities {
+  .glow-green {
+    @apply shadow-[0_0_30px_rgba(0,200,150,0.3)];
+  }
+  
+  .text-green-accent {
+    @apply text-[#00C896];
+  }
+  
+  .border-green {
+    @apply border-[#00C896];
+  }
+  
+  .rounded-section-top {
+    @apply rounded-t-[4rem];
+  }
+  
+  .rounded-section-bottom {
+    @apply rounded-b-[4rem];
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+  }
+}
