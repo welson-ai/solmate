@@ -10,15 +10,12 @@ export function Hero() {
         loop
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', objectFit: 'cover', zIndex: '0' }}
       >
-        <source src="https://drive.google.com/uc?export=download&id=15GGOMKDV1jE_hfyBRWAmIURA3jVsqtqt" type="video/mp4" />
-        {/* Fallback to local file */}
-        <source src="./assets/hero-video.mp4" type="video/mp4" />
+        <source src="/assets/hero-video.mp4" type="video/mp4" />
       </video>
       
       {/* Content Wrapper */}
-      <div className="relative z-1 text-center" style={{ position: 'relative', zIndex: '1' }}>
+      <div className="relative z-1 text-center">
         <div className="max-w-4xl mx-auto px-6">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-none">
             Your <span className="text-[#00C896]">Intelligent</span> <span className="text-[#00C896]">DeFi</span> Assistant
