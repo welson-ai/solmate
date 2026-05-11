@@ -1,5 +1,7 @@
 'use client'
 
+import Link from 'next/link'
+
 export function Hero() {
   return (
     <section className="relative w-full h-[95vh] bg-solmate-black flex items-center justify-center overflow-hidden">
@@ -27,9 +29,9 @@ export function Hero() {
             Solmate combines advanced AI with Solana&apos;s speed to give you 24/7 yield optimization. 
             Monitor positions, execute strategies, and maximize returns—all with complete control.
           </p>
-          <button className="px-10 py-4 bg-[#00C896] text-black font-bold rounded-full text-lg hover:bg-[#00a878] transition transform hover:scale-105 shadow-lg">
+          <Link href="/app" className="px-10 py-4 bg-[#00C896] text-black font-bold rounded-full text-lg hover:bg-[#00a878] transition transform hover:scale-105 shadow-lg inline-block">
             Get Started
-          </button>
+          </Link>
         </div>
       </div>
     </section>

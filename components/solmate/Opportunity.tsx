@@ -1,5 +1,7 @@
 'use client'
 
+import Link from 'next/link'
+
 export function Opportunity() {
   return (
     <section id="opportunity" className="w-full py-24 relative overflow-hidden">
@@ -117,9 +119,9 @@ export function Opportunity() {
 
               {/* Green CTA button */}
               <div className="flex justify-center mt-8">
-                <button className="px-8 py-3 bg-[#00C896] text-black font-bold rounded-full text-lg hover:bg-[#00a878] transition transform hover:scale-105 shadow-lg">
+                <Link href="/app" className="px-8 py-3 bg-[#00C896] text-black font-bold rounded-full text-lg hover:bg-[#00a878] transition transform hover:scale-105 shadow-lg inline-block">
                   Launch App
-                </button>
+                </Link>
               </div>
             </div>
           </div>
