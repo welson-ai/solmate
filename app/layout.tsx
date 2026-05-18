@@ -34,6 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-background">
+      <head>
+        <meta name="talentapp:project_verification" content="a1eddc008e5871428bf63b833758be9caf661dc0a69cadb95685095ee892f6d8b7aee409e68b0e630472cce73172f51691b862d0819f67b28b1b452a967794fb" />
+      </head>
       <body className={`${inter.className} font-sans antialiased bg-background text-foreground`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
