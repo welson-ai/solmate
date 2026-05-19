@@ -1,6 +1,7 @@
 'use client'
 
 import { LogoMark } from './LogoMark'
+import { MiniPayButton } from './MiniPayButton'
 
 export function Navbar() {
   return (
@@ -31,10 +32,10 @@ export function Navbar() {
           </a>
         </div>
 
-        {/* CTA Button - Hidden on Mobile */}
-        <button className="hidden md:block px-6 py-2 bg-[#00C896] text-black font-bold rounded-full text-sm hover:bg-[#00a878] transition">
-          Launch App
-        </button>
+        {/* MiniPay Connect Button - Hidden on Mobile */}
+        <div className="hidden md:block">
+          <MiniPayButton />
+        </div>
 
         {/* Mobile Menu Button */}
         <button className="md:hidden text-white p-2">
